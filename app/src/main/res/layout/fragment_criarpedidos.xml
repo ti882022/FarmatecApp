@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A2E0D5"
+    tools:context=".CriarpedidosFragment">
+
+    <FrameLayout
+        android:id="@+id/cadastro_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="224dp"
+        android:layout_height="194dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/logo_farm" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp">
+
+
+            <EditText
+                android:id="@+id/editTextNomeCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="-3dp"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:ems="10"
+                android:hint="Nome do Cliente"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextCanal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextNomeCliente"
+                android:layout_alignStart="@+id/editTextNomeCliente"
+                android:layout_alignLeft="@+id/editTextNomeCliente"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Canal" />
+
+                <!--<EditText
+                android:id="@+id/editTextFormadepagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextNomeCliente"
+                android:layout_alignStart="@+id/editTextNomeCliente"
+                android:layout_alignLeft="@+id/editTextCanal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="59dp"
+                android:ems="10"
+                android:hint="Forma de Pagamento"
+                android:inputType="textPassword" />-->
+
+            <EditText
+                android:id="@+id/editTextCodFuncionario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextCanal"
+                android:layout_alignStart="@+id/editTextCanal"
+                android:layout_alignLeft="@+id/editTextCanal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:ems="10"
+                android:hint="Codigo do Funcionário" />
+
+            <EditText
+                android:id="@+id/editTextCodProduto"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextCodFuncionario"
+                android:layout_alignStart="@+id/editTextCodFuncionario"
+                android:layout_alignLeft="@+id/editTextCanal"
+                android:ems="10"
+                android:hint="Codigo do Produto" />
+
+            <EditText
+                android:id="@+id/editTextQuantidade"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextCodFuncionario"
+                android:layout_marginLeft="200dp"
+                android:hint="Quantidade" />
+
+            <Button
+                android:id="@+id/btnInserirPedido"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextQuantidade"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/botao_customizado"
+                android:text="Add"
+                android:textColor="@color/black"
+                app:backgroundTint="@null" />
+            <Button
+                android:id="@+id/btnFinalizar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextQuantidade"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/botao_customizado"
+                android:text="Finish"
+                android:textColor="@color/black"
+                app:backgroundTint="@null" />
+        <RelativeLayout
+            android:id="@+id/relativePedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnInserirPedido">
+
+            <ListView
+                android:id="@+id/ListViewPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_marginTop="20dp"
+                android:horizontalSpacing="60dp" />
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

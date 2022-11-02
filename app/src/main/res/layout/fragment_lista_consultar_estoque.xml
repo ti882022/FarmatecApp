@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A2E0D5"
+    tools:context=".ListaConsultarEstoqueFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_farm"/>
+
+    <EditText
+        android:id="@+id/edtBarradePesquisa"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableEnd="@drawable/ic_lupa"
+        android:gravity="center_vertical"
+        android:hint="Digite o nome do Cliente"
+        android:padding="12dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeListaCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="145dp">
+
+        <ListView
+            android:id="@+id/lstviewConsultarProdutos"
+            android:layout_width="400dp"
+            android:layout_height="600dp" />
+    </RelativeLayout>
+
+</FrameLayout>

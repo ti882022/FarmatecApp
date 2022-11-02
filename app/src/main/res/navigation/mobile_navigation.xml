@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_menu">
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.farmatecalphaversion.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_nav_menu_to_nav_cadastro"
+            app:destination="@id/nav_cadastro" />
+        <action
+            android:id="@+id/action_nav_menu_to_consultarEstoqueFragment"
+            app:destination="@id/nav_ConsulatrEstoque" />
+        <action
+            android:id="@+id/action_nav_menu_to_consultarPedidosFragment"
+            app:destination="@id/nav_consultarPedidos" />
+        <action
+            android:id="@+id/action_nav_menu_to_criarpedidosFragment"
+            app:destination="@id/nav_criarpedidos" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cadastro"
+        android:name="com.farmatecalphaversion.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" />
+    <fragment
+        android:id="@+id/nav_ConsulatrEstoque"
+        android:name="com.farmatecalphaversion.ConsultarEstoqueFragment"
+        android:label="fragment_consultar_estoque"
+        tools:layout="@layout/fragment_consultar_estoque" >
+        <action
+            android:id="@+id/action_consultarEstoqueFragment_to_listaConsultarEstoqueFragment"
+            app:destination="@id/nav_listaConsultarEstoque" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_listaConsultarEstoque"
+        android:name="com.farmatecalphaversion.ListaConsultarEstoqueFragment"
+        android:label="fragment_lista_consultar_estoque"
+        tools:layout="@layout/fragment_lista_consultar_estoque" >
+        <action
+            android:id="@+id/action_listaConsultarEstoqueFragment_to_consultarEstoqueFragment"
+            app:destination="@id/nav_ConsulatrEstoque" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_consultarPedidos"
+        android:name="com.farmatecalphaversion.ConsultarPedidosFragment"
+        android:label="fragment_consultar_pedidos"
+        tools:layout="@layout/fragment_consultar_pedidos" />
+    <fragment
+        android:id="@+id/nav_criarpedidos"
+        android:name="com.farmatecalphaversion.CriarpedidosFragment"
+        android:label="fragment_criarpedidos"
+        tools:layout="@layout/fragment_criarpedidos" />
+</navigation>

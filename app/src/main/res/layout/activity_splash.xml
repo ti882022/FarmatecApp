@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash"
+    android:orientation="vertical"
+    android:background="#A2E0D5">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:src="@drawable/logo_farm" />
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="110dp"
+        android:text="FarmaTec"
+        android:textColor="#000"
+        android:textSize="40sp"/>
+
+
+</LinearLayout>
